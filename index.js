@@ -26,10 +26,10 @@ class Player{
 
     constructor(name){
         this.state = {
-            "leftArm": "-",
-            "rightArm": "-",
-            "leftLeg": "-",
-            "rightLeg": "-"
+            "Left arm": "-",
+            "Right arm": "-",
+            "Left leg": "-",
+            "Right leg": "-"
         };
         this.name = name;
         Player.playerCount++;
@@ -46,11 +46,8 @@ class Player{
     }
 
     setPart(part, color){
-        if (this.data.hasOwnProperty(part)) {
-            this.data[part] = color;
-        } else {
-            console.warn(`Part ${part} does not exist.`);
-        }
+        console.log(`seting part: ${part}, setting color: ${color}`);
+        this.state[part] = color;
     }
 }
 
@@ -77,15 +74,19 @@ function runGame(){
         input.textContent = `${names[currentPlayer]} \n ${part[currentPart]} \n ${colors[currentColor]}`;
         if(currentColor == 0){
             document.body.style.backgroundColor = "hsl(129, 65%, 80%)";
+            players[currentPlayer].setPart(part[currentPart], colors[currentColor]);
         }
         else if(currentColor == 1){
             document.body.style.backgroundColor = "hsl(73, 91.00%, 82.50%)";
+            players[currentPlayer].setPart(part[currentPart], colors[currentColor]);
         }
         else if(currentColor == 2){
             document.body.style.backgroundColor = "hsl(224, 64.70%, 80.00%)";
+            players[currentPlayer].setPart(part[currentPart], colors[currentColor]);
         }
         else if(currentColor == 3){
             document.body.style.backgroundColor = "hsl(0, 64.70%, 80.00%)";
+            players[currentPlayer].setPart(part[currentPart], colors[currentColor]);
         }
 
         players[currentPlayer].sayParts();
