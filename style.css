@@ -8,7 +8,6 @@ body{
     transition: background-color 0.5s ease;
 }
 
-
 #game-container{
     display: flex;
     width: 65vh;
@@ -18,7 +17,6 @@ body{
     text-align: center;
     transition: 0.7s ease;
 }
-
 
 #result{
     display: flex;
@@ -37,7 +35,6 @@ body{
     overflow:visible;
     white-space: pre-line;
 }
-
 
 #start-btn{
     display: none;

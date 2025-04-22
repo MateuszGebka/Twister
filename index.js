@@ -1,6 +1,7 @@
 
 let currentPlayer = -1;
 let names = [];
+let players = [];
 const input = document.getElementById("result");
 const playerName = document.getElementById("name");
 const titlePlayer = document.getElementById("name-select-h3");
@@ -94,8 +95,6 @@ function submitName(){
             const player1 = new Player("Player 1");
         }
         else{
-
-            
             names.push(playerName.value);
             const player1 = new Player(playerName.value);
         }
