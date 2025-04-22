@@ -35,6 +35,10 @@ class Player{
         Player.playerCount++;
     }
 
+    introduce() {
+        console.log(`I am ${this.name}`);
+    }
+
     setPart(part, color){
         if (this.data.hasOwnProperty(part)) {
             this.data[part] = color;
@@ -50,6 +54,9 @@ class Player{
 
 
 function startGame(){
+    for (let i = 0; i < players.length; i++){
+        players[i].introduce();
+    }
     input.textContent = "Game starts now!";
     currentPlayer = Math.floor(Math.random() * 2);
     runGame();
@@ -92,11 +99,11 @@ function submitName(){
     if(names.length == 0){
         if(playerName.value === ""){
             names.push("Player 1");
-            const player1 = new Player("Player 1");
+            players.push(new Player(`Player 1`));
         }
         else{
             names.push(playerName.value);
-            const player1 = new Player(playerName.value);
+            players.push(new Player(`${playerName.value}`));
         }
         playerName.value = "";
         console.log(names);
@@ -105,11 +112,11 @@ function submitName(){
     else if(names.length == 1){
         if(playerName.value === ""){
             names.push("Player 2");
-            const player2 = new Player("Player 2");
+            players.push(new Player(`Player 2`));
         }
         else{
             names.push(playerName.value);
-            const player2 = new Player(playerName.value);
+            players.push(new Player(`${playerName.value}`));
         }
         console.log(names);
         nameSelection.style.display = "none";
