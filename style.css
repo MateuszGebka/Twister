@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(235, 254, 255);
+    transition: background-color 0.5s ease;
+}
+
+
+#game-container{
+    display: flex;
+    width: 65vh;
+    height: 65vh;
+    justify-items: center;
+    border-radius: 25px;
+    text-align: center;
+    transition: 0.7s ease;
+}
+
+
+#result{
+    display: flex;
+    width: 100%;
+    height: 75%;
+    font-size: 18px;
+    font-size: 6vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgb(241, 240, 240);
+    color: hsl(0, 19%, 18%);
+    border-radius: 25px;
+    box-sizing: border-box;
+    overflow:visible;
+    white-space: pre-line;
+}
+
+
+#start-btn{
+    display: none;
+    width: 15%;
+    height: 25%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 45px;
+    background-color: hsl(133, 78%, 73%);
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    transition: 1s ease-in-out;
+    position: relative;
+}
+
+#start-btn.slide-out{
+    transform: translateX(-100vw);
+    opacity: 0;
+}
+
+
+#playersNames{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#start-btn:hover{
+    background-color: hsl(133, 78%, 63%);
+}
+
+#start-btn:active{
+    background-color: hsl(133, 78%, 53%);
+}
+
+#name{
+    font-size: 16px;
+    font-size: 4vh;
+    width: 75%;
+    margin: 5px;
+}
+
+#name-select{
+    width: 35%;
+    height: 10%;
+    background-color:hsl(133, 78%, 73%);
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 25px;
+    font-size: 35px;
+}
+
+#name-select-h3{
+    width: 50%;
+    font-size: 16px;
+    font-size: 4vh;
+}
+
+#name-select-btn{
+    height: 75%;
+    margin: 15px;
+    background-color: hsl(33, 43%, 76%);
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    font-size: 3vh;
+    border-radius: 15px;
+}
+#name-select-btn:hover{
+    background-color: hsl(33, 43%, 66%);
+}
+
+#name-select-btn:active{
+    background-color: hsl(33, 43%, 56%);
+}
+
+#draw-btn{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content: center;
+    font-size: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: hsl(0, 65%, 70%);
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 25px;
+}
+
+
+#draw-btn:hover{
+    background-color: hsl(0, 65%, 50%);
+}
+#draw-btn:active{
+    background-color: hsl(0, 65%, 30%);
+}
+
+
+@media (max-width:1200px) {
+    #name-select{
+        padding: 5px;
+    }
+    #name{
+        padding: 5px;
+        font-size: 20px;
+    }
+    #name-select-h3{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:800px) {
+    #name-select{
+        padding: 0;
+    }
+}
