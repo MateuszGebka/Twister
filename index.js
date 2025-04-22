@@ -26,10 +26,10 @@ class Player{
 
     constructor(name){
         this.state = {
-            leftArm: "-",
-            rightArm: "-",
-            leftLeg: "-",
-            rightLeg: "-"
+            "leftArm": "-",
+            "rightArm": "-",
+            "leftLeg": "-",
+            "rightLeg": "-"
         };
         this.name = name;
         Player.playerCount++;
@@ -37,6 +37,12 @@ class Player{
 
     introduce() {
         console.log(`I am ${this.name}`);
+    }
+
+    sayParts() {
+        for(const [part, color] of Object.entries(this.state)){
+            console.log(`Part: ${part}, Color: ${color}`);
+        }
     }
 
     setPart(part, color){
@@ -81,12 +87,16 @@ function runGame(){
         else if(currentColor == 3){
             document.body.style.backgroundColor = "hsl(0, 64.70%, 80.00%)";
         }
+
+        players[currentPlayer].sayParts();
+
         if(currentPlayer == 1){
             currentPlayer = 0;
         }
         else{
             currentPlayer++;
         }
+        
     }, 3000);
 }
 
