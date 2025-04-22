@@ -10,6 +10,8 @@ const startGameButton = document.getElementById("start-btn");
 const playersNames = document.getElementById("playersNames");
 const button = document.getElementById("start-btn");
 const gameContainer = document.getElementById("game-container");
+const playerName1 = document.getElementById("playerName1");
+const playerName2 = document.getElementById("playerName2");
 
 
 const colors = ["Green", "Yellow", "Blue", "Red"];
@@ -111,10 +113,12 @@ function submitName(){
         if(playerName.value === ""){
             names.push("Player 1");
             players.push(new Player(`Player 1`));
+            playerName1.textContent = "Player 1";
         }
         else{
             names.push(playerName.value);
             players.push(new Player(`${playerName.value}`));
+            playerName1.textContent = playerName.value;
         }
         playerName.value = "";
         console.log(names);
@@ -124,10 +128,12 @@ function submitName(){
         if(playerName.value === ""){
             names.push("Player 2");
             players.push(new Player(`Player 2`));
+            playerName2.textContent = "Player 2";
         }
         else{
             names.push(playerName.value);
             players.push(new Player(`${playerName.value}`));
+            playerName2.textContent = playerName.value;
         }
         console.log(names);
         nameSelection.style.display = "none";
