@@ -12,7 +12,14 @@ const button = document.getElementById("start-btn");
 const gameContainer = document.getElementById("game-container");
 const playerName1 = document.getElementById("playerName1");
 const playerName2 = document.getElementById("playerName2");
-
+const player1LeftArm = document.getElementById("leftArm1");
+const player1RighttArm = document.getElementById("rightArm1");
+const player1LeftLeg = document.getElementById("leftLeg1");
+const player1RightLeg = document.getElementById("rightLeg1");
+const player2LeftArm = document.getElementById("leftArm2");
+const player2RighttArm = document.getElementById("rightArm2");
+const player2LeftLeg = document.getElementById("leftLeg2");
+const player2RightLeg = document.getElementById("rightLeg2");
 
 const colors = ["Green", "Yellow", "Blue", "Red"];
 const part = ["Left arm", "Right arm", "Left leg", "Right leg"];
@@ -21,6 +28,7 @@ let currentColor = -1;
 let currentPart = -1;
 
 let gameInterval = null;
+
 
 
 class Player{
@@ -50,6 +58,7 @@ class Player{
     setPart(part, color){
         console.log(`seting part: ${part}, setting color: ${color}`);
         this.state[part] = color;
+        
     }
 }
 
