@@ -29,6 +29,7 @@ let currentPart = -1;
 
 let gameInterval = null;
 
+
 class Player{
     static playerCount = 0;
 
@@ -47,7 +48,7 @@ class Player{
     introduce() {
         console.log(`I am ${this.name}`);
     }
-    
+
 
     sayParts() {
         for(const [part, color] of Object.entries(this.state)){
@@ -61,6 +62,7 @@ class Player{
         
     }
 }
+
 
 
 

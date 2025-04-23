@@ -8,6 +8,7 @@ body{
     transition: background-color 0.5s ease;
 }
 
+
 #game-container{
     display: flex;
     width: 65vh;
@@ -145,6 +146,7 @@ body{
     font-size: 3vh;
     border-radius: 15px;
 }
+
 #name-select-btn:hover{
     background-color: hsl(33, 43%, 66%);
 }
@@ -167,12 +169,15 @@ body{
 }
 
 
+
 #draw-btn:hover{
     background-color: hsl(0, 65%, 50%);
 }
+
 #draw-btn:active{
     background-color: hsl(0, 65%, 30%);
 }
+
 
 
 @media (max-width:1200px) {
