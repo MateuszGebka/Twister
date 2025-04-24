@@ -21,6 +21,7 @@ body{
 }
 
 
+
 #result{
     display: flex;
     width: 65vh;
@@ -38,6 +39,7 @@ body{
     overflow:visible;
     white-space: pre-line;
 }
+
 
 #game-layout{
     border: 2px solid;

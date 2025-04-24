@@ -29,8 +29,6 @@ let currentPart = -1;
 
 let gameInterval = null;
 
-
-
 class Player{
     static playerCount = 0;
 
@@ -65,11 +63,6 @@ class Player{
 }
 
 
-
-
-
-
-
 function startGame(){
     for (let i = 0; i < players.length; i++){
         players[i].introduce();
@@ -78,7 +71,6 @@ function startGame(){
     currentPlayer = Math.floor(Math.random() * 2);
     runGame();
 }
-
 
 
 function runGame(){
