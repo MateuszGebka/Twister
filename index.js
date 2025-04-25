@@ -125,7 +125,7 @@ function runGame(){
             players[currentPlayer].setPart(part[currentPart], colors[currentColor]);
         }
 
-        players[currentPlayer].sayParts();
+        // players[currentPlayer].sayParts();
 
         if(currentPlayer == 1){
             currentPlayer = 0;
@@ -206,15 +206,23 @@ function IntervalTimer(callback, interval) {
     state = 1;
 }
 
+let isPaused = false;
 
 document.addEventListener("keydown", function(event) {
     if (event.code === "Space") {
-      event.preventDefault(); // Optional: prevent page from scrolling
-      console.log("Spacebar pressed!");
+        event.preventDefault();
+        isPaused = !isPaused;
+        
+        if(isPaused){
+            console.log("Paused");
+            gameInterval.pause();
+        } else {
+            console.log("Resumed");
+            gameInterval.resume();
+        }
+
     }
   });
-
-
 
 
 button.addEventListener('click', () => {
