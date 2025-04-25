@@ -13,13 +13,16 @@ const gameContainer = document.getElementById("game-container");
 const playerName1 = document.getElementById("playerName1");
 const playerName2 = document.getElementById("playerName2");
 const player1LeftArm = document.getElementById("leftArm1");
-const player1RighttArm = document.getElementById("rightArm1");
+const player1RightArm = document.getElementById("rightArm1");
 const player1LeftLeg = document.getElementById("leftLeg1");
 const player1RightLeg = document.getElementById("rightLeg1");
 const player2LeftArm = document.getElementById("leftArm2");
-const player2RighttArm = document.getElementById("rightArm2");
+const player2RightArm = document.getElementById("rightArm2");
 const player2LeftLeg = document.getElementById("leftLeg2");
 const player2RightLeg = document.getElementById("rightLeg2");
+
+const player1 = document.getElementById("player1");
+const player2 = document.getElementById("player2");
 
 const colors = ["Green", "Yellow", "Blue", "Red"];
 const part = ["Left arm", "Right arm", "Left leg", "Right leg"];
@@ -58,7 +61,34 @@ class Player{
     setPart(part, color){
         console.log(`seting part: ${part}, setting color: ${color}`);
         this.state[part] = color;
-        
+        if(currentPlayer == 0){
+            if(currentPart == 0){
+                player1LeftArm.textContent = `Left arm: ${color}`;
+            }
+            else if(currentPart == 1){
+                player1RightArm.textContent = `Right arm: ${color}`;
+            }
+            else if(currentPart == 2){
+                player1LeftLeg.textContent = `Left leg: ${color}`;
+            }
+            else if(currentPart == 3){
+                player1RightLeg.textContent = `Right leg: ${color}`;
+            }
+        }
+        else if(currentPlayer == 1){
+            if(currentPart == 0){
+                player2LeftArm.textContent = `Left arm: ${color}`;
+            }
+            else if(currentPart == 1){
+                player2RightArm.textContent = `Right arm: ${color}`;
+            }
+            else if(currentPart == 2){
+                player2LeftLeg.textContent = `Left leg: ${color}`;
+            }
+            else if(currentPart == 3){
+                player2RightLeg.textContent = `Right leg: ${color}`;
+            }
+        }
     }
 }
 
@@ -151,5 +181,7 @@ button.addEventListener('click', () => {
     gameContainer.style.height = "80vh";
     setTimeout(() => {
         button.style.display = 'none';
+        player1.style.display = 'flex';
+        player2.style.display = 'flex';
     }, 450);
 });
