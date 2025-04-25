@@ -24,6 +24,8 @@ const player2RightLeg = document.getElementById("rightLeg2");
 const player1 = document.getElementById("player1");
 const player2 = document.getElementById("player2");
 
+const timer = document.getElementById("timer");
+
 const colors = ["Green", "Yellow", "Blue", "Red"];
 const part = ["Left arm", "Right arm", "Left leg", "Right leg"];
 
@@ -100,6 +102,7 @@ function startGame(){
     input.textContent = "Game starts now!";
     currentPlayer = Math.floor(Math.random() * 2);
     runGame();
+    timerCountdown();
 }
 
 
@@ -171,6 +174,19 @@ function submitName(){
     }
 }
 
+function timerCountdown(){
+    let seconds = 3;
+    setTimeout(3000);
+
+    countdown = new IntervalTimer(() => {
+        timer.textContent = `${seconds}s`;
+        seconds--;
+        if(seconds == -1){
+            seconds = 3;
+        }
+    }, 1000);
+
+}
 
 function IntervalTimer(callback, interval) {
     var timerId, startTime, remaining = 0;
