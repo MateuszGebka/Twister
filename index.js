@@ -177,6 +177,7 @@ function submitName(){
 function timerCountdown(){
     let seconds = 3;
     setTimeout(3000);
+    
 
     countdown = new IntervalTimer(() => {
         timer.textContent = `${seconds}s`;
