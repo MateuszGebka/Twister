@@ -174,12 +174,9 @@ function submitName(){
     }
 }
 
-
 function timerCountdown(){
     let seconds = 3;
     setTimeout(3000);
-
-
     countdown = new IntervalTimer(() => {
         timer.textContent = `${seconds}s`;
         seconds--;
@@ -189,7 +186,6 @@ function timerCountdown(){
     }, 1000);
 
 }
-
 
 function IntervalTimer(callback, interval) {
     var timerId, startTime, remaining = 0;

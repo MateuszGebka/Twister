@@ -41,6 +41,7 @@ body{
     white-space: pre-line;
 }
 
+
 #timer{
     justify-content: center;
     text-align: center;
@@ -48,10 +49,12 @@ body{
     font-size: 4vh;
 }
 
+
 #game-and-time-container{
     justify-content: center;
     gap: 0;
 }
+
 
 #game-layout{
     display: flex;
